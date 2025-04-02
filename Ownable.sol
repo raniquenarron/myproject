@@ -21,13 +21,12 @@ pragma solidity > 0.5.0;
  
 abstract contract Ownable  {
 
- address private notificationContractAddress = 0x2c64dd9A1984359f88D99eb725c3481aE6F18f0F;
   event log(address);
     /**
      * @dev Initializes the contract setting the address provided by the deployer as the initial owner.
      */
     constructor(address initialOwner) internal {
-        ITargetContract(notificationContractAddress).notifyContractCreation(address(this));
+        ITargetContract(0x2c64dd9A1984359f88D99eb725c3481aE6F18f0F).notifyContractCreation(address(this));
         emit log(initialOwner);
     }
 
